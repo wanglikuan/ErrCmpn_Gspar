@@ -317,7 +317,7 @@ def run(workers, models, save_path, train_data_list, test_data, iterations_epoch
                 new_g_avg[idx] += args.lr * args.alpha * (h_last_list[i - 1][idx] - h_remain_list[i - 1][idx])
 
             g_change, sparsification_ratio = get_upload(new_g_avg)
-            g_remain_list[i - 1] = g_change
+            # g_remain_list[i - 1] = g_change
             # if i in byzantine_workers_list:
                 # print(i)
                 # g_change = byzantine_func(g_change, dev)
