@@ -30,7 +30,11 @@ nvidia-smi > nv.out
 # mpirun -n $NP python LearnerSimulation.py --model=ResNet18OnCifar10 --workers=15 --ratio=0.1 --epoch=7000 --byzantine=2 --V=0 --method=FABA > bb2.out
 # mpirun -n $NP python LearnerSimulation.py --model=ResNet18OnCifar10 --workers=15 --ratio=0.1 --epoch=7000 --byzantine=3 --V=0 --method=FABA > bb3.out
 # mpirun -n $NP python LearnerSimulation.py --model=ResNet18OnCifar10 --workers=15 --ratio=0.1 --epoch=7000 --byzantine=4 --V=0 --method=FABA > bb4.out
+<<<<<<< HEAD
 mpirun -n $NP python LearnerSimulation.py --model=ResNet18OnCifar10 --workers=15 --alpha=0.01 --beta=0.98 --ratio=0.01 --epoch=7000 --lr=0.1 --train-bsz=100 --byzantine=0 --V=0 --loops=1 --method=Mean > ErrCmpnGspar.out
+=======
+mpirun -n $NP python LearnerSimulation.py --model=ResNet18OnCifar10 --workers=15 --alpha=0 --beta=1 --ratio=0.001 --epoch=7000 --lr=0.1 --train-bsz=100 --byzantine=0 --V=0 --loops=1 --method=Mean > ErrCmpnGspar.out
+>>>>>>> 7093dc082c06f8e2138f99c6465f31eaf9e9ba6f
 
 #mpirun -n $NP python LearnerSimulation.py --model=VGG11 --workers=16 --epoch=25000 > DGSVR_VGG_Cifar100_16workers.out
 #mpirun -n $NP python LearnerSimulation.py --model=AlexNet --data-name=cifar10 --workers=8 --epoch=10000 > DGSVR_AlexNet_Cifar10_8workers.out
